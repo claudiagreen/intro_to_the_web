@@ -13,7 +13,11 @@ get '/carrot' do
   "I love carrot."
 end
 
-get '/cat' do
-  @random_name = ['Steve', 'Daisy', 'Brian'].sample
+get '/random-cat' do
+  @name = ['Steve', 'Daisy', 'Brian'].sample
+  erb(:index)
+end
+get '/named-cat' do
+  @name = params[:name]
   erb(:index)
 end
