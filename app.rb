@@ -19,5 +19,6 @@ get '/random-cat' do
 end
 get '/named-cat' do
   @name = params[:name]
+  @colour = params[:colour]
   erb(:index)
 end

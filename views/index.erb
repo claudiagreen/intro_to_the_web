@@ -1,5 +1,11 @@
-<% if @name %>
-  <h1>My name is <%= @name %> </h1>
+<% if @name == nil %>
+  <form action="/named-cat">
+    <input type="text" name="name">
+    <input type="text" name="colour">
+    <input type="submit" value="Submit">
+  </form>
 <% end %>
-
+<% if @name %>
+  <h1>My name is <%= @name %> and i have <%= @colour %> eyes. </h1>
+<% end %>
 <img src="http://bit.ly/1eze8aE" style="border: 2px dashed red"/>
