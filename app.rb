@@ -14,5 +14,6 @@ get '/carrot' do
 end
 
 get '/cat' do
-  '<img src="http://bit.ly/1eze8aE" style="border: 2px dashed black"/>' 
+  @random_name = ['Steve', 'Daisy', 'Brian'].sample
+  erb(:index)
 end
